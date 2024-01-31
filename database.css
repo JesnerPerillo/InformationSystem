@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --primary-color: #16265C;
+  --panel-color: #FFF;
+  --text-color: #FFF;
+  --black-light-color: #707070;
+  --border-color: #e6e5e5;
+  --toggle-color: #DDD;
+
+  --tran-03: all 0.3s ease;
+}
+
+body{
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+
+body.dark{
+  --primary-color: #3A3B3C;
+  --panel-color: #242526;
+  --text-color: #CCC;
+  --black-light-color: #CCC;
+  --border-color: #4D4C4C;
+  --toggle-color: #FFF;
+
+  --tran-03: all 0.3s ease;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  padding: 10px 14px;
+  background-color: var(--panel-color);
+}
+
+nav .nav-links li{
+  margin-top: 10px;
+}
+
+nav .logo-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 10%;
+  border-radius: 10px;
+}
+
+nav .logo-image {
+  min-width: 45px;
+  justify-content: center;
+  display: flex;
+}
+
+nav .logo-image img, .prof img{
+  width: 40px;
+  object-fit: cover;
+}
+
+nav .logo-name .logo_name{
+  font-weight: 600;
+  font-size: 30px;
+  margin-left: 15px;
+  color: var(--text-color);
+}
+
+nav .menu-items{
+  margin-top: 10px;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-items li{
+  list-style: none;
+}
+
+.menu-items li a{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-items li a:hover:before{
+  content: "";
+  position: absolute;
+  left: -10px;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+i{
+  min-width: 45px;
+  font-size: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black-light-color);
+}
+
+.menu-items li a .link-name{
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--black-light-color);
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+  color: var(--primary-color)
+}
+
+.menu-items .mode{
+  display: flex;
+  align-items: center;
+}
+
+.menu-items .mode-toggle{
+  height: 50px;
+  min-width: 45px;
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mode-toggle .switch{
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+}
+
+.switch:before{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--panel-color);
+  transition: var(--tran-03);
+}
+
+body.dark .switch:before{
+  left: 20px;
+}
+
+.colored i, #coloredd{
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.dashboard i{
+  width: 0px;
+  color: var(--text-color);
+}
+
+.dashboard{
+  margin-left: 13%;
+  display: flex;
+  background-color: var(--primary-color);
+  box-shadow: 5px 2px 2px #888888;
+}
+
+.dash-menu{
+  width: 500px;
+  display: flex;
+  margin-top: 20px;
+  height: 70px;
+  padding-left: 50px;
+}
+
+.dash-menu p{
+  color: var(--text-color);
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+
+.prof{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  margin-top: 30px;
+}
+
+table{
+  height: 100px;
+  margin-left: 25%;
+  position: absolute;
+  top: 65%;
+  align-items: center;
+}
+
+table th{
+  background-color: #FFF;
+  padding: 20px;
+}
+
+table td{
+  background-color: #707070;
+  text-align: center;
+  padding: 20px;
+}
+
+.userrs{
+  display: flex;
+  position: relative;
+  top: 20px;
+  left: 14%;
+  width: 80%;
+  height: 20vh;
+  justify-content: center;
+}
+
+.userrs p{
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.photo{
+  margin-left: 13%;
+  width: 80%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+}
+
+.photo img{
+  width: 100%;
+  height: 100%;
+}
+
+.edit-sec{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form-container{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 4;
+}
+
+.edit-form{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.edit-form label{
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.edit-form input{
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.edit-form button{
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form .btn2{
+  background-color: #D21312;
+}
+
+.edit-form .btn2:hover{
+  background-color: #D21312;
+}
+
+.edit-form button:hover{
+  background-color: #45a049;
+}
+
+#deleteFormContainer{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#deleteFormContainer label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+#deleteFormContainer input{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+#deleteFormContainer button{
+  background-color: #D21312;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#deleteFormContainer button[type="submit"]{
+  background-color: #D21312;
+}
+
+#deleteFormContainer button[type="button"]{
+  background-color: #ccc;
+}
+
+#deleteFormContainer button:hover{
+  background-color: #333;
+}
+
